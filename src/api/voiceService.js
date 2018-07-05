@@ -62,7 +62,7 @@ function requestNewVoice() {
                 author: newScript.data.author,
                 createdAt: new Date()
             }
-            saveNewVoice(newVoice).then(result => { return res.send(result) })
+            return saveNewVoice(newVoice)
         });
     });
 }
@@ -75,7 +75,6 @@ function saveNewVoice(voiceInfo) {
     return new Promise((resolve) => {
         let voice = new Voice({ _id: new mongoose.Types.ObjectId(), script: voiceInfo.script, voice: voiceInfo.voice, author: voiceInfo.author, createdAt: voiceInfo.createdAt });
         voice.save().then(result => {
-            console.log('VOICE SAVED SUCCESSFULLY')
             resolve(result)
         }).catch(err => {
             console.log(err);
@@ -89,7 +88,10 @@ export default {
     Allows the external routes to access the requestNewVoice function.
     */
     postVoice(req, res) {
-        requestNewVoice()
+        requestNewVoice().then((result) => { 
+            console.log('GOT HERE')
+            res.status(200).json(result)
+         })
     },
 
     /* 
