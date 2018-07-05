@@ -16,7 +16,7 @@ export default {
         template += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
         template += '<meta name="description" content="">'
         template += '<meta name="author" content="">'
-        template += '<title>4 Col Portfolio - Start Bootstrap Template</title>'
+        template += '<title>Speedy</title>'
         template += '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">'
         template += '<style type="text/css">'
         template += 'body {'
@@ -92,8 +92,6 @@ export default {
         template += '<p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>'
         template += '</div>'
         template += '</footer>'
-        template += '<script src="vendor/jquery/jquery.min.js"></script>'
-        template += '<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>'
         template += '</body>'
         template += '</html>'
 
