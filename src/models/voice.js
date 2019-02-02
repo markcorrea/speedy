@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 /*
 The schema for the MongoDB database. Once the database is created and 
@@ -9,7 +9,7 @@ const productSchema = mongoose.Schema({
   script: { type: String, required: true },
   voice: { type: String, required: true },
   author: { type: String, required: true },
-  createdAt: { type: Date, required: true }
-});
+  createdAt: { type: Date, required: true },
+})
 
-module.exports = mongoose.model('Voice', productSchema);
+module.exports = mongoose.model('Voice', productSchema)
